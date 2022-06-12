@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+    <information>
+        <name>Compact_Blog</name>
+        <version>1.0</version>
+        <description>
+            <![CDATA[ 학문용 최적화 블로그 스킨입니다.]]>
+        </description>
+        <license>
+            <![CDATA[ MIT License]]>
+        </license>
+    </information>
+    <author>
+        <name><![CDATA[ 지구일 ]]></name>
+        <homepage>https://github.com/Gon-91/TISTORY-SKIN</homepage>
+        <email>hk1069@naver.com</email>
+    </author>
+    <default>
+        <entriesOnPage>6</entriesOnPage>
+		<entriesOnList>6</entriesOnList>
+		<recentEntries>4</recentEntries>
+		<recentComments>4</recentComments>
+		<recentTrackbacks>4</recentTrackbacks>
+		<itemsOnGuestbook>4</itemsOnGuestbook>
+		<tagsInCloud>20</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>8</expandComment>
+		<lengthOfRecentNotice>40</lengthOfRecentNotice>
+		<lengthOfRecentEntry>30</lengthOfRecentEntry>
+		<lengthOfRecentComment>40</lengthOfRecentComment>
+		<lengthOfRecentTrackback>40</lengthOfRecentTrackback>
+		<lengthOfLink>30</lengthOfLink>
+		<commentMessage>
+			<none>0</none>
+			<single>1</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>0</none>
+			<single>1</single>
+		</trackbackMessage>
+		<contentWidth>700</contentWidth>
+		<toolbar>white</toolbar> 
+    </default>
+    <cover>
+        <item>
+            <name>fullscreen</name>
+            <label>
+                <![CDATA[ 전체 화면 모드 ]]>
+            </label>
+            <description>
+                <![CDATA[ 전체 화면을 100%로 채우는 슬라이더 입니다. ]]>
+            </description>
+        </item>
+    </cover>
+</skin>
