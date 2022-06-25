@@ -9,41 +9,94 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
+    <!-- 스타일 및 자바 스크립트 -->
     <link href="./style.css" rel="stylesheet">
+    <script src="./images/com.js"></script>
 </head>
 <body id="[##_body_id_##]">
     <s_t3>
+    <!-- 사이드바 영역 -->
+        <nav class="sidebar_wrap">
+            <div class="sidebar_logo" style="background-image:url('<s_if_var_logo_img>[##_var_logo_img_##]</s_if_var_logo_img>');" onclick="location.href ='[##_blog_link_##]'" >
+                <a href="[##_blog_link_##]" title="[##_blogger_##]" class="logo_wrap">
+                    <s_not_var_logo_img>
+                        [##_blogger_##]
+                    </s_not_var_logo_img>
+                </a>
+            </div>
+            <div class="sidbar_category">
+                [##_category_list_##]
+            </div>
+            <div class="sidbar_banner">
+
+            </div>
+            <div class="sidbar_counter">
+                [##_count_total_##]
+                [##_count_today_##]
+                [##_count_yesterday_##]
+            </div>
+        </nav>
+
     <!-- 헤더 영역 -->
-
+        <header class="header_wrap">
+            <div class="header_logo" style="background-image:url('<s_if_var_logo_img>[##_var_logo_img_##]</s_if_var_logo_img>');" onclick="location.href ='[##_blog_link_##]'">
+                <a href="[##_blog_link_##]" title="[##_blogger_##]" class="logo_wrap">
+                    <s_not_var_logo_img>
+                        [##_blogger_##]
+                    </s_not_var_logo_img>
+                </a>
+            </div>
+            <div class="header_content"></div>
+            <div class="header_menu" onclick="OpenMenu()">
+                    <svg>
+                        <use xlink:href="#icon_menu" class="icon"/>
+                    </svg>
+            </div>
+            <div class="header_search" onclick="">
+                    <svg>
+                        <use xlink:href="#icon_search" class="icon"/>
+                    </svg>
+            </div>
+        </header>
     <!-- 홈 커버 영역 -->
-
-            <s_cover_group>
-                <s_cover_rep>
-                        <div class="cover_fullscreen_wrap">
-                        <s_cover name='fullscreen'>
-                            <s_cover_item>
-                                    <div class="cover_fullscreen_grid" style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>');">
-                                        <div class="content_wrap">
-                                            <div class="content_subject">
-                                                <h1><strong>[##_cover_item_title_##]</strong></h1>
-                                            </div>
-                                            <div class="content_text">
-                                                [##_cover_item_summary_##]
-                                            </div>
-                                            <div class="content_detail">
-                                                <a href="[##_cover_item_url_##]">Go to detail</a>
-                                            </div>
-
+        <s_cover_group>
+            <s_cover_rep>
+                    <div class="cover_fullscreen_wrap">
+                    <s_cover name='fullscreen'>
+                        <s_cover_item>
+                                <div class="cover_fullscreen_grid" style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>');">
+                                    <div class="content_wrap">
+                                        <div class="content_subject">
+                                            <h1><strong>[##_cover_item_title_##]</strong></h1>
                                         </div>
-
+                                        <div class="content_text">
+                                            [##_cover_item_summary_##]
+                                        </div>
+                                        <div class="content_detail">
+                                            <a href="[##_cover_item_url_##]">Go to detail</a>
+                                        </div>
                                     </div>
-                            </s_cover_item>
-                        </div>    
-                        </s_cover>
-                </s_cover_rep>
-            </s_cover_group>       
-
-    
+                                </div>
+                        </s_cover_item>
+                    </div>    
+                    </s_cover>
+            </s_cover_rep>
+        </s_cover_group>       
     </s_t3>
 </body>
 </html>
+
+<!-- SVG -->
+<!-- icon -->
+<div claas="svg symbol" style="display: none;">
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="icon_menu" viewBox="0 0 24 24">
+        <rect y="11" width="24" height="2" rx="1"/><rect y="4" width="24" height="2" rx="1"/><rect y="18" width="24" height="2" rx="1"/>
+    </symbol>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="icon_search" viewBox="0 0 24 24">
+        <path d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"/>
+    </symbol>
+</svg>
+</div>
