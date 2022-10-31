@@ -17,7 +17,7 @@
     </author>
     <default>
         <entriesOnPage>6</entriesOnPage>
-		<entriesOnList>6</entriesOnList>
+		<entriesOnList>1</entriesOnList>
 		<recentEntries>4</recentEntries>
 		<recentComments>4</recentComments>
 		<recentTrackbacks>4</recentTrackbacks>
@@ -38,8 +38,13 @@
 			<none>0</none>
 			<single>1</single>
 		</trackbackMessage>
-		<contentWidth>700</contentWidth>
+		<contentWidth>720</contentWidth>
 		<toolbar>white</toolbar> 
+        <tree>
+            <color>000000</color>
+            <activeColor>ff567a</activeColor>
+            <showValue>1</showValue>
+        </tree>
     </default>
     <cover>
         <item>
@@ -59,6 +64,18 @@
                 <label>로고 이미지</label>
                 <description>상단 헤더에 표시될 로고 이미지를 추가하세요.</description>
                 <type>IMAGE</type>
+            </variable>
+            <variable>
+                <name>cover_img</name>
+                <label>커버 이미지</label>
+                <description>커버에 표시될 커버 이미지를 추가하세요.</description>
+                <type>IMAGE</type>
+            </variable>
+            <variable>
+                <name>e-mail-address</name>
+                <label>E-Mail</label>
+                <description>메일 주소를 입력해주세요.</description>
+                <type>STRING</type>
             </variable>
         </variablegroup>
     </variables>

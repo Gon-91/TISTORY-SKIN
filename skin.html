@@ -12,59 +12,54 @@
     <!-- 스타일 및 자바 스크립트 -->
     <link href="./style.css" rel="stylesheet">
     <script src="./images/com.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225809463888617"
+    crossorigin="anonymous"></script>
+
+
 </head>
 <body id="[##_body_id_##]">
     <s_t3>
     <!-- 사이드바 영역 -->
-        <nav class="sidebar_wrap">
-            <div class="sidebar_logo" style="background-image:url('<s_if_var_logo_img>[##_var_logo_img_##]</s_if_var_logo_img>');" onclick="location.href ='[##_blog_link_##]'" >
-                <a href="[##_blog_link_##]" title="[##_blogger_##]" class="logo_wrap">
-                    <s_not_var_logo_img>
-                        [##_blogger_##]
-                    </s_not_var_logo_img>
-                </a>
-            </div>
-            <div class="sidbar_category">
-                [##_category_list_##]
-            </div>
-            <div class="sidbar_banner">
-
-            </div>
-            <div class="sidbar_counter">
-                [##_count_total_##]
-                [##_count_today_##]
-                [##_count_yesterday_##]
-            </div>
-        </nav>
-
-    <!-- 헤더 영역 -->
-        <header class="header_wrap">
-            <div class="header_logo" style="background-image:url('<s_if_var_logo_img>[##_var_logo_img_##]</s_if_var_logo_img>');" onclick="location.href ='[##_blog_link_##]'">
-                <a href="[##_blog_link_##]" title="[##_blogger_##]" class="logo_wrap">
-                    <s_not_var_logo_img>
-                        [##_blogger_##]
-                    </s_not_var_logo_img>
-                </a>
-            </div>
-            <div class="header_content"></div>
-            <div class="header_menu" onclick="OpenMenu()">
-                    <svg>
-                        <use xlink:href="#icon_menu" class="icon"/>
-                    </svg>
-            </div>
-            <div class="header_search" onclick="">
-                    <svg>
-                        <use xlink:href="#icon_search" class="icon"/>
-                    </svg>
-            </div>
-        </header>
+    [##_revenue_list_upper_##]
     <!-- 홈 커버 영역 -->
         <s_cover_group>
             <s_cover_rep>
-                    <div class="cover_fullscreen_wrap">
                     <s_cover name='fullscreen'>
+                        <div id="coverfullscreen-container" >
+                            <div id="coverfullscreen-left-subcontainer">
+                                <div class="coverfullscreen-left-functions left-functions">
+                                    <a href=""><img src="./images/fi-rr-home.svg" alt=""></a>
+                                    <a href=""><img src="./images/fi-rr-database.svg" alt=""></a>
+                                    <a href=""><img src="./images/fi-rr-search.svg" alt=""></a>
+                                    <a href=""><img src="./images/fi-rr-crown.svg" alt=""></a>   
+                                </div>
+
+                            </div>
+                            <div id="coverfullscreen-main-subcontainer">
+                                <img src="[##_var_cover_img_##]" alt="">
+                                <div class="coverfullscreen-main-counter counter">
+                                    <p>
+                                        TODAY : [##_count_today_##]
+                                    </p>
+                                    <p>
+                                        YESTER DAY : [##_count_yesterday_##]
+                                    </p>
+                                    <p>
+                                        TOTAL : [##_count_total_##]
+                                    </p>
+                                </div>
+                                <div class="coverfullscreen-main-footer">
+                                    <p>Designed by G91 </p>
+                                </div>  
+                            </div>
+                            <div id="coverfullscreen-right-subcontainer">
+                                <div class="coverfullscreen-right-functions ">
+                                    <a href=""><img src="./images/fi-rr-moon.svg" alt=""></a>
+                                    <a href=""><img src="./images/fi-rr-comment.svg" alt=""></a>
+                                    <a href=""><img src="./images/fi-rr-comment-info.svg" alt=""></a>
+                                </div>
+                            </div>
                         <s_cover_item>
-                                <div class="cover_fullscreen_grid" style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>');">
                                     <div class="content_wrap">
                                         <div class="content_subject">
                                             <h1><strong>[##_cover_item_title_##]</strong></h1>
@@ -76,27 +71,201 @@
                                             <a href="[##_cover_item_url_##]">Go to detail</a>
                                         </div>
                                     </div>
-                                </div>
                         </s_cover_item>
-                    </div>    
+                        </div>
                     </s_cover>
             </s_cover_rep>
-        </s_cover_group>       
+        </s_cover_group>
+        
+    <!-- 목록 영역 -->
+    <s_list>
+        <div id="list-container">
+            <div id="list-header-container">
+                <s_list_image><img class="list-header-img" src="[##_list_image_##]" alt=""></s_list_image>
+
+                <div class="list-header-title">
+                    <h3>[##_list_conform_##]</h3>
+                    <p>총 [##_list_count_##]개의 포스트</p>
+                </div>
+            </div>
+            <div id="list-main-cnotainer">
+                <div class="list-main-header">
+                    <p>[##_list_conform_##]([##_list_count_##])</p>
+                </div>
+                <ol>
+                    <s_list_rep>
+                        <li>      
+                            <div class="list-main-img">
+                                <a href="[##_list_rep_link_##]">
+                                <s_list_rep_thumbnail>
+                                    <img src="[##_list_rep_thumbnail_##]">
+                                </s_list_rep_thumbnail>
+                                </a>
+                            </div>
+                            <div class="list-main-content">
+                                <a href="[##_list_rep_link_##]">
+                                <div>
+                                    <p>[##_list_rep_title_##]</p>
+
+                                </div>
+                                <div>
+                                   <p>[##_list_rep_summary_##]</p> 
+                                </div>
+                                <div>
+                                    <span class="date">[##_list_rep_regdate_##]</span>
+                                </div>
+                                </a>
+                            </div>
+                        </li>
+                    </s_list_rep>
+                </ol>
+            </div>
+
+        </div>
+    </s_list>
+
+    <!-- 글 영역 -->       
+    <s_article_rep>
+    <s_permalink_article_rep>
+        <div id="article-container">
+            <div id="article-header-container">
+                <img class="article-header-img" src="<s_article_rep_thumbnail>[##_article_rep_thumbnail_url_##]</s_article_rep_thumbnail>" alt="">
+                <div class="article-header-title">
+                    <h3>[##_article_rep_title_##]</h3>
+                    <p>[##_article_rep_category_##]</p>
+                </div>
+            </div>
+            <div id="article-main-cnotainer">
+                [##_article_rep_desc_##]
+            </div>
+            <div class="article-toc-container">
+
+            </div>
+        </div>
+
+    </s_permalink_article_rep>
+    </s_article_rep>
+    
+    <!-- 아이콘 바 -->
+    <div class="icons">
+        <div class="icons-wrap">
+            <div class="icon-btn" onclick="OpenMenuIcon()">
+                <img  src="./images/fi-rr-arrow-circle-right.svg" alt="">
+            </div>
+            <div  class="icon-show" onclick="CloseMenuIcon()">
+                <img  src="./images/fi-rr-arrow-circle-left.svg" alt="">
+            </div>
+            <div class="icon-show">
+                <a href="[##_blog_link_##]"><img src="./images/fi-rr-home.svg" alt=""></a>
+            </div>
+            <div class="icon-show" onclick="Opencategory()">
+                <img src="./images/fi-rr-database.svg" alt="">
+            </div>
+            <div class="icon-show" onclick="Opensearch()">
+                <img src="./images/fi-rr-search.svg" alt="">
+            </div>
+            
+            <div class="icon-show">
+
+                <img src="./images/fi-rr-moon.svg" alt="">
+            </div>
+            <div class="icon-show">
+                <img src="./images/fi-rr-crown.svg" alt="">
+                
+            </div>
+            <div class="icon-show">
+                <img src="./images/fi-rr-comment.svg" alt="">
+               
+            </div>
+            <div class="icon-show" onclick="OpenInfo()">
+
+                <img src="./images/fi-rr-comment-info.svg" alt="">
+            </div>
+
+        </div>
+    </div>
+    <!-- 좌측 고정 네비바 -->
+    <div class="lnb">
+        <div class="lnb-colse" onclick="Closelnb()">
+            <img src="./images/fi-rr-cross-circle.svg" alt="">
+        </div>
+        <div class="lnb-menu lnb-show">
+                [##_category_list_##]
+        </div>
+        <div class="lnb-search lnb-show">
+            <div class="search">
+                <s_search>
+                  <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
+                  />
+                  <input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" />
+                </s_search>
+              </div>
+              <h2>인기 글</h2>
+              <s_rctps_popular_rep>
+                
+                [##_rctps_rep_link_##]
+                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+              </s_rctps_popular_rep>
+              <h2>최근 글</h2>
+              <s_rctps_rep>
+                
+                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+            </s_rctps_rep>
+              <div class="tagbox">
+                <h3>태그목록</h3>
+                <ul>
+                  <s_random_tags>
+                    <li>
+                      <a href="[##_tag_link_##]" class="[##_tag_class_##]"> [##_tag_name_##]</a>
+                    </li>
+                  </s_random_tags>
+                </ul>
+              </div>
+        </div>
+        <div class="lnb-info lnb-show">
+            <div>
+                <h1>[##_title_##]</h1>
+            </div>
+            <div>
+                <img src="[##_var_logo_img_##]">
+            </div>
+            <div>
+                <h2>[##_blogger_##]</h2>
+                <p>[##_desc_##]</p>
+                <p>[##_var_e-mail-address_##]</p>
+            </div>
+            <div class="coverfullscreen-main-counter counter">
+                <p>
+                    TODAY : [##_count_today_##]
+                </p>
+                <p>
+                    YESTER DAY : [##_count_yesterday_##]
+                </p>
+                <p>
+                    TOTAL : [##_count_total_##]
+                </p>
+            </div>
+        </div>
+    </div>   
     </s_t3>
+    <s_paging>
+        <div class="list-main-paging">
+                <a [##_prev_page_##]><img src="./images/fi-rr-arrow-circle-left.svg"></a>
+          <div class="list-main-numbox">
+            <s_paging_rep>
+              <a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
+            </s_paging_rep>
+          </div>
+            <a [##_next_page_##]><img src="./images/fi-rr-arrow-circle-right.svg"></a>
+        </div>
+    </s_paging>
+    [##_revenue_list_lower_##]
+    <div id="footer-container">
+        <div>
+            <p>Designed by G91 </p>
+        </div>
+    </div>
 </body>
 </html>
+<script src="./images/toc.js"></script>
 
-<!-- SVG -->
-<!-- icon -->
-<div claas="svg symbol" style="display: none;">
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol xmlns="http://www.w3.org/2000/svg" id="icon_menu" viewBox="0 0 24 24">
-        <rect y="11" width="24" height="2" rx="1"/><rect y="4" width="24" height="2" rx="1"/><rect y="18" width="24" height="2" rx="1"/>
-    </symbol>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol xmlns="http://www.w3.org/2000/svg" id="icon_search" viewBox="0 0 24 24">
-        <path d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"/>
-    </symbol>
-</svg>
-</div>
