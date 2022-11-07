@@ -510,11 +510,82 @@ Grid Set
 
 /* Article
         Article Main Container
-
+        Article Coment
 */
 #article-main-cnotainer h1,h2,h3,h4,h5,h6{
     margin-top: 35px;
     margin-bottom: 15px;
+}
+.article-comment-write{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+}
+.article-comment-write div:nth-child(1){
+    display: inline-block;
+    width: 70%;
+}
+.article-comment-write div:nth-child(1) textarea{
+    width: 100%;
+    height: 170px;
+
+    border: 1px solid black;
+}
+.article-comment-write div:nth-child(2) {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 170px;
+}
+.article-comment-write div:nth-child(2) input{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    top: -75px;
+    width: 100%;
+    height: 125px;
+}
+
+.article-comment-main{
+    position: relative  ;
+    display:flex;
+    height: 150px;
+    align-items: center;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.article-comment-main .article-comment-main-logo{
+    margin: 0 auto;
+
+    width: 100px;
+    height: 100px;
+}
+.article-comment-main .article-comment-main-content{
+    margin: 0 auto;
+    margin-left: 15px;
+    width: 80%;
+    height: 100px;
+}
+.article-comment-sub{
+    margin-left: 60px;
+    position: relative  ;
+    display:flex;
+    height: 150px;
+    align-items: center;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.article-comment-sub .article-comment-sub-logo{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+.article-comment-sub .article-comment-sub-content{
+    margin: 0 auto;
+
+    margin-left: 15px;
+    width: 70%;
+    height: 100px;
 }
 /* Article
         Article Toc Container
@@ -688,8 +759,6 @@ Grid Set
     overflow: scroll;
     scrollbar-width: none;
     background-color: #fff;
-    padding-top: 110px;
-    padding-bottom: 110px;
 
     border-radius: 10px;
     box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
@@ -698,44 +767,35 @@ Grid Set
 .lnb::-webkit-scrollbar{
     display:none ;
 }
-
 .lnb-menu{
-
-
     margin: auto;
     width: 80%;
-
-
     border-radius: 10px;
     box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
     3px 3px 5px rgba(0, 0, 0, 0.1);
+
+    margin-top: 110px;
+    margin-bottom: 110px;
 }
-
-
 .lnb-menu .tt_category{
-
     margin: auto;
     text-align: center;
 }
 .lnb-menu .tt_category .c_cnt{
     display: none;
 }
-
 .lnb-menu a{
     text-decoration: none;
     list-style: none;
     color: #000000  ;
 }
-
 .lnb-menu .link_tit{
-
     font-size: 2em;
 }
 .lnb-menu .category_list{
     margin-top: 25px;
 }
 .lnb-menu .category_list li{
-
     padding: 1em;
     margin-bottom: .125em;
     display: block;
@@ -759,7 +819,6 @@ Grid Set
     margin-bottom: .125em;
     display: block;
     list-style: none;
-
     border-radius: 10px;
     box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
     3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -786,14 +845,14 @@ Grid Set
 .lnb-show{
     display: none;
 }
-
-
-
+.lnb-info{
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
 .lnb-info div:nth-child(1){
     text-align: center;
     margin: 12px;
 }
-
 .lnb-info div:nth-child(2) {
     text-align: center;
     margin: auto;
@@ -811,9 +870,70 @@ Grid Set
     width: 80%;
     margin: auto;
 }
+.lnb-search{
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
+.lnb-search div:nth-child(1) input{
+    margin: auto;
+    margin-left: 10%;
+    width: 70%;
+    height: 42px;
 
+    border: 3px solid black;
 
+    border-radius: 10px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.lnb-search div:nth-child(1) button{
+    margin: 5px;
+    width: 50px;
+    height: 52px;
+    transform:translate(0,45%);
+}
 
+.lnb-search div:nth-child(1) button span img{
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.lnb-search .search-linkwrap{
+    margin: auto;
+    width: 320px;
+    border: 1px solid black;
+}
+.lnb-search .search-imgwrap{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.lnb-search .search-imgwrap img{
+    width: 100%;
+    height: 100%;
+    
+}
+.lnb-search .search-decwrap{
+    position:relative ;
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+.lnb-search .search-decwrap h4{
+    margin-top: 5px;
+}
+.lnb-search .search-decwrap p{
+    position:absolute ;
+
+    bottom: 5px;
+}
 .icons{
 
     position: fixed;

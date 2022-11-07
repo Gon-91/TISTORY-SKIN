@@ -19,6 +19,76 @@
 </head>
 <body id="[##_body_id_##]">
     <s_t3>
+        <s_guest>
+            <div class="guestbook">
+              <h3>방명록</h3>
+              <div class="guestWrite">입력 폼</div>
+              <div class="guestList">리스트</div>
+            </div>
+            <s_guest_input_form>
+                <div class="guestWrite">
+                  <s_guest_member>
+                    <s_guest_form>
+                      <div>
+                        <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" />
+                        <label for="name"> : 이름 </label>
+                      </div>
+                      <div>
+                        <input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" />
+                        <label for="password"> : 패스워드 </label>
+                      </div>
+                      <div>
+                        <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" />
+                        <label for="homepage"> : 홈페이지 </label>
+                      </div>
+                    </s_guest_form>
+                  </s_guest_member>
+                  <div>
+                    <textarea name="[##_guest_textarea_body_##]" cols="50" rows="6"></textarea>
+                  </div>
+                  <div>
+                    <input type="submit" value="안부 남기기" onclick="[##_guest_onclick_submit_##]"/>
+                  </div>
+                </div>
+              </s_guest_input_form>
+              <s_guest_container>
+                <div class="guestList">
+                  <ol>
+                    <s_guest_rep>
+                      <li id='[##_guest_rep_id_##]'>
+                        <div class="[##_guest_rep_class_##]">
+                          <span class="name">[##_guest_rep_name_##]</span>
+                          <span class="date"> [##_guest_rep_date_##]</span>
+                          <span class="control">
+                            <a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE</a>
+                            <a href="#" onclick="[##_guest_rep_onclick_reply_##]">REPLY</a>
+                          </span>
+                          <p>[##_guest_rep_desc_##]</p>
+                        </div>
+                        <s_guest_reply_container>
+                          <ul>
+                            <s_guest_reply_rep>
+                            <li id='[##_guest_rep_id_##]'>
+                              <div class="[##_guest_rep_class_##]">
+                                <span class="name">[##_guest_rep_name_##]</span>
+                                <span class="date"> [##_guest_rep_date_##]</span>
+                                <span class="control">
+                                  <a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE </a>
+                                </span>
+                                <p>[##_guest_rep_desc_##]</p>
+                              </div>
+                            </li>
+                            </s_guest_reply_rep>
+                          </ul>
+                        </s_guest_reply_container>
+                      </li>
+                    </s_guest_rep>
+                  </ol>
+                </div>
+              </s_guest_container>
+          </s_guest>
+          
+          
     <!-- 사이드바 영역 -->
     [##_revenue_list_upper_##]
     <!-- 홈 커버 영역 -->
@@ -137,6 +207,70 @@
             </div>
             <div id="article-main-cnotainer">
                 [##_article_rep_desc_##]
+                <div class="article-main-comment">
+                    <h3> Commnet </h3>
+                    <s_rp>
+                        <s_rp_input_form>
+                        <div class="article-comment-write">
+                            <div>
+                                <textarea type="text" name="[##_rp_input_comment_##]"></textarea>
+                            </div>
+                            <div>
+                                <input value="쓰기" type="button" onclick="[##_rp_onclick_submit_##]">
+                            </div>
+                        </div>
+                        </s_rp_input_form>
+
+                        <s_rp_container>
+                        <div >
+                            <s_rp_rep>
+                                <div class="article-comment-main">
+                                    <div class="article-comment-main-logo">
+                                        <img src="[##_rp_rep_logo_##]">
+                                    </div>
+                                    <div class="article-comment-main-content">
+                                        <div>
+                                            [##_rp_rep_id_##]            
+                                        </div>
+                                        <div>
+                                            [##_rp_rep_desc_##]                    
+                                        </div>
+                                        <div>
+                                            [##_rp_rep_date_##]
+                                            <span><a onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a></span>
+                                            <span><a onclick="[##_rp_rep_onclick_reply_##]">답글</a></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <s_rp2_container>
+                                    <s_rp2_rep>
+                                        <div class="article-comment-sub">
+                                            <div class="article-comment-sub-logo">
+                                                <img src="[##_rp_rep_logo_##]">
+                                            </div>
+                                            <div class="article-comment-sub-content">
+                                                <div>
+                                                    [##_rp_rep_id_##]            
+                                                </div>
+                                                <div>
+                                                    [##_rp_rep_desc_##]                    
+                                                </div>
+                                                <div>
+                                                    [##_rp_rep_date_##]
+                                                    <span><a onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a></span>
+                                                    <span><a onclick="[##_rp_rep_onclick_reply_##]">답글</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </s_rp2_rep>
+                                </s_rp2_container>
+                            </s_rp_rep>
+                        </div>    
+                        </s_rp_container>
+                    </s_rp>
+                </div>
             </div>
             <div class="article-toc-container">
 
@@ -173,7 +307,7 @@
                 <img src="./images/fi-rr-crown.svg" alt="">
                 
             </div>
-            <div class="icon-show">
+            <div class="icon-show" onclick="location.href='[##_guestbook_link_##]';">
                 <img src="./images/fi-rr-comment.svg" alt="">
                
             </div>
@@ -193,24 +327,61 @@
                 [##_category_list_##]
         </div>
         <div class="lnb-search lnb-show">
-            <div class="search">
+            <div>
                 <s_search>
-                  <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
-                  />
-                  <input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" />
+                <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+                <button value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" >
+                    <span>
+                        <img src="./images/fi-rr-search.svg" alt="">
+                    </span>
+                </button>
                 </s_search>
-              </div>
-              <h2>인기 글</h2>
-              <s_rctps_popular_rep>
-                
-                [##_rctps_rep_link_##]
-                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
-              </s_rctps_popular_rep>
+            </div>
+            <h2>인기 글</h2>
+            <div>
+                <s_rctps_popular_rep>
+                      
+                        <a href="[##_rctps_rep_link_##]">
+                            <div class="search-linkwrap">
+                                <div class="search-imgwrap">
+                                    <s_rctps_rep_thumbnail>
+                                        <img src="[##_rctps_rep_thumbnail_##]">
+                                    </s_rctps_rep_thumbnail>
+                                </div>
+                                <div class="search-decwrap">
+                                    <h4>[##_rctps_rep_title_##]</h4>
+                                    <p>[##_rctps_rep_category_##] / [##_rctps_rep_simple_date_##]</p>
+                                    
+                                </div>
+                            </div>
+                        </a>
+
+                  </s_rctps_popular_rep>
+            </div>
+
               <h2>최근 글</h2>
+              <div>
               <s_rctps_rep>
-                
-                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+
+                    <a href="[##_rctps_rep_link_##]">
+                        <div class="search-linkwrap">
+                            <div class="search-imgwrap">
+                                <s_rctps_rep_thumbnail>
+                                    <img src="[##_rctps_rep_thumbnail_##]">
+                                </s_rctps_rep_thumbnail>
+                            </div>
+                            <div class="search-decwrap">
+                                <h4>[##_rctps_rep_title_##]</h4>
+                                <p>[##_rctps_rep_category_##] / [##_rctps_rep_simple_date_##]</p>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+
+
             </s_rctps_rep>
+            </div>
               <div class="tagbox">
                 <h3>태그목록</h3>
                 <ul>

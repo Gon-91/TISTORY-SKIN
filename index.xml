@@ -18,7 +18,7 @@
     <default>
         <entriesOnPage>6</entriesOnPage>
 		<entriesOnList>1</entriesOnList>
-		<recentEntries>4</recentEntries>
+		<recentEntries>3</recentEntries>
 		<recentComments>4</recentComments>
 		<recentTrackbacks>4</recentTrackbacks>
 		<itemsOnGuestbook>4</itemsOnGuestbook>
